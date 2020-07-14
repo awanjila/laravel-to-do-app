@@ -17,7 +17,9 @@
 				
 			
 		
+	
+	<a href="/todos/{{ $todo->id}}/edit"class="btn btn-info  my5">Edit</a>
+	<a href="/todos/{{ $todo->id}}/delete"class="btn btn-danger  my5">Delete</a>
 	</div>
-	<a href="/todos/{{ $todo->id}}/edit"class="btn btn-info btn-sm my5">Edit</a>
 	
 @endsection

@@ -63,4 +63,13 @@ public function update($todoId)
     $todo->save();
     return redirect('/todos');
 }
+
+public function destroy($todoId)
+{
+$todo =Todo::find($todoId);
+$todo->delete();
+
+return redirect('/todos');
+
+}
 }
