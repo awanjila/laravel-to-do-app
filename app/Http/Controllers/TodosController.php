@@ -36,6 +36,8 @@ public function store()
     $todo->completed =false;
     $todo->save();
 
+    session()->flash("success", 'Todo created successfully');
+
     return redirect('/todos');
 
 
@@ -61,6 +63,7 @@ public function update(Todo $todo)
 	$todo->name =$data['name'];
     $todo->description =$data['description'];
     $todo->save();
+      session()->flash("success", 'Todo Updated successfully');
     return redirect('/todos');
 }
 
@@ -68,6 +71,7 @@ public function destroy(Todo $todo)
 {
 
 $todo->delete();
+  session()->flash("success", 'Todo Deleted Successfully');
 
 return redirect('/todos');
 
